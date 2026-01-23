@@ -14,7 +14,7 @@ export default function Welcome() {
     ]);
     
     // Definimos el estado del contador
-    const [contador, setContador] = useState(3);
+    const [contador, setContador] = useState(3); // No lo pono en 0 por que entiendo que el contador empieza en 3 por que hay ya 3 tareas si no un 0 y se pondria en rojo cuando llegue a 13
     const bloqueado = contador >= LIMITE;
     
     // 3. Función para añadir una tarea nueva
@@ -56,7 +56,7 @@ export default function Welcome() {
                         bloqueado ? "bg-red-500 text-white cursor-not-allowed" : "bg-indigo-500 text-white cursor-pointer"
                     }`}
                 >
-                    Añadir Tarea Aleatoria
+                    <p> {bloqueado ? "¡Lista Llena!" : "Añadir tarea"}</p>
                 </button>
             </div>
         </div>
